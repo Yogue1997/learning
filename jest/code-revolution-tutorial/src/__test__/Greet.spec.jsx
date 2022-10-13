@@ -5,14 +5,14 @@ import Greet from "../components/greet/Greet";
 
 describe("Greet", () => {
 
-  it("renders correctly", () => {
+  fit("renders correctly", () => {
     render(<Greet />);
     const textElement = screen.getByText("Hello");
     expect(textElement).toBeInTheDocument();
   });
 
   describe("Nested", () => {
-    it("renders with a name", () => {
+    xit("renders with a name", () => {
       render(<Greet name="Youssouf" />);
       const textElement = screen.getByText("Hello Youssouf");
       expect(textElement).toBeInTheDocument();
