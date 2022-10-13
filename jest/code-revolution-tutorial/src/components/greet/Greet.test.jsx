@@ -11,9 +11,16 @@ test("Greet renders correctly", () => {
   const textElement = screen.getByText('Hello');
   expect(textElement).toBeInTheDocument();
 });
-
-test('Greet renders with a name', () => {
+// .skip() will skip that specific test
+test.skip('Greet renders with a name', () => {
   render(<Greet name='Youssouf'/>)
   const textElement = screen.getByText('Hello Youssouf')
   expect(textElement).toBeInTheDocument()
 })
+
+// .only() runs only the specific test
+// test.only('Greet renders with a name', () => {
+//   render(<Greet name='Youssouf'/>)
+//   const textElement = screen.getByText('Hello Youssouf')
+//   expect(textElement).toBeInTheDocument()
+// })
